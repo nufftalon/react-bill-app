@@ -34,7 +34,8 @@ export default class Button extends Component {
 				className={`button ${this.props.action}`}
 				style={styleButton}
 				onMouseEnter={this.toggleHover}
-				onMouseLeave={this.toggleHover}>
+				onMouseLeave={this.toggleHover}
+				onClick={this.props.trigger}>
 				{this.props.children}
 			</div>
 		);

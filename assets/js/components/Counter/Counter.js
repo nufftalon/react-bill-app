@@ -4,28 +4,48 @@ import Button from './Button.js';
 export default class Counter extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			currentNumber: 0
+		};
 	}
+	clickedAdd = () => {
+		this.setState(
+			{
+				currentNumber: this.state.currentNumber + 1
+			},
+			() => {
+				console.log(this.state);
+			}
+		);
+	};
+
+	clickedMinus = () => {
+		this.setState({
+			currentNumber: this.state.currentNumber - 1
+		});
+	};
 
 	render() {
 		return (
 			<div id="counter-comp" style={styleCounterComp}>
 				<div className="number" style={styleNumber}>
-					0
+					{this.state.currentNumber}
 				</div>
 				<div className="buttons" style={styleButtons}>
 					<Button
 						action="minus"
 						hoverColor="red"
 						fontColor="white"
-						backgroundColor="black">
+						backgroundColor="black"
+						trigger={this.clickedMinus}>
 						-
 					</Button>
 					<Button
 						action="plus"
 						hoverColor="purple"
 						fontColor="black"
-						backgroundColor="white">
+						backgroundColor="white"
+						trigger={this.clickedAdd}>
 						+
 					</Button>
 				</div>
