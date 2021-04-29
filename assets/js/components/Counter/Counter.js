@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button.js';
 
 export default class Counter extends Component {
 	constructor() {
@@ -13,12 +14,8 @@ export default class Counter extends Component {
 					0
 				</div>
 				<div className="buttons" style={styleButtons}>
-					<div className="button minus" style={styleButton}>
-						-
-					</div>
-					<div className="button plus" style={styleButton}>
-						+
-					</div>
+					<Button action="minus">-</Button>
+					<Button action="plus">+</Button>
 				</div>
 			</div>
 		);
