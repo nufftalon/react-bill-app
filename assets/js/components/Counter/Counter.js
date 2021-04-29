@@ -4,9 +4,7 @@ import Button from './Button.js';
 export default class Counter extends Component {
 	constructor() {
 		super();
-		this.state = {
-			currentNumber: 0
-		};
+		this.state = { status: 'manual', currentNumber: 0 };
 	}
 	clickedAdd = () => {
 		this.setState(
@@ -18,13 +16,33 @@ export default class Counter extends Component {
 			}
 		);
 	};
-
+	componentWillUnmount() {
+		console.log('component will mount stated');
+	}
+	componentDidMount() {
+		if (this.props.status == 'auto') {
+			this.setState(
+				{
+					status: this.props.status
+				},
+				() => {
+					this.counterRun();
+				}
+			);
+		}
+	}
 	clickedMinus = () => {
 		this.setState({
 			currentNumber: this.state.currentNumber - 1
 		});
 	};
-
+	counterRun = () => {
+		setInterval(() => {
+			this.setState({
+				currentNumber: this.state.currentNumber + 1
+			});
+		}, 1000);
+	};
 	render() {
 		return (
 			<div id="counter-comp" style={styleCounterComp}>
