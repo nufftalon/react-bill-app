@@ -44,6 +44,34 @@ export default class Counter extends Component {
 		}, 1000);
 	};
 	render() {
+		const styleCounterComp = {
+			width: '100%',
+			maxWidth: '400px',
+			margin: '0 auto'
+		};
+
+		const styleNumber = {
+			border: '3px solid black',
+			padding: '20px',
+			fontSize: '2rem',
+			fontWeight: '900',
+			textAlign: 'center'
+		};
+
+		const styleButton = {
+			width: '50%',
+			border: '3px solid black',
+			padding: '20px',
+			fontSize: '2rem',
+			fontWeight: '900',
+			textAlign: 'center',
+			cursor: 'pointer'
+		};
+
+		const styleButtons = {
+			display: this.props.status == 'auto' ? 'none' : 'flex'
+		};
+
 		return (
 			<div id="counter-comp" style={styleCounterComp}>
 				<div className="number" style={styleNumber}>
@@ -71,31 +99,3 @@ export default class Counter extends Component {
 		);
 	}
 }
-
-const styleCounterComp = {
-	width: '100%',
-	maxWidth: '400px',
-	margin: '0 auto'
-};
-
-const styleNumber = {
-	border: '3px solid black',
-	padding: '20px',
-	fontSize: '2rem',
-	fontWeight: '900',
-	textAlign: 'center'
-};
-
-const styleButton = {
-	width: '50%',
-	border: '3px solid black',
-	padding: '20px',
-	fontSize: '2rem',
-	fontWeight: '900',
-	textAlign: 'center',
-	cursor: 'pointer'
-};
-
-const styleButtons = {
-	display: 'flex'
-};
