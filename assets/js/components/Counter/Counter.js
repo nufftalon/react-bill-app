@@ -14,8 +14,20 @@ export default class Counter extends Component {
 					0
 				</div>
 				<div className="buttons" style={styleButtons}>
-					<Button action="minus">-</Button>
-					<Button action="plus">+</Button>
+					<Button
+						action="minus"
+						hoverColor="red"
+						fontColor="white"
+						backgroundColor="black">
+						-
+					</Button>
+					<Button
+						action="plus"
+						hoverColor="purple"
+						fontColor="black"
+						backgroundColor="white">
+						+
+					</Button>
 				</div>
 			</div>
 		);

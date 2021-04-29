@@ -14,6 +14,21 @@ export default class Button extends Component {
 	};
 
 	render() {
+		const styleButton = {
+			color: this.props.fontColor,
+			width: '50%',
+			border: '3px solid black',
+			padding: '20px',
+			fontSize: '2rem',
+			fontWeight: '900',
+			textAlign: 'center',
+			cursor: 'pointer',
+			transition: 'all .6s ease-in-out',
+			background: this.state.hover
+				? this.props.hoverColor
+				: this.props.backgroundColor
+		};
+
 		return (
 			<div
 				className={`button ${this.props.action}`}
@@ -25,14 +40,3 @@ export default class Button extends Component {
 		);
 	}
 }
-
-const styleButton = {
-	width: '50%',
-	border: '3px solid black',
-	padding: '20px',
-	fontSize: '2rem',
-	fontWeight: '900',
-	textAlign: 'center',
-	cursor: 'pointer',
-	background: 'white'
-};
