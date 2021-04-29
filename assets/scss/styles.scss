@@ -16,3 +16,25 @@ h1{font-weight:100;}
 .container{
   padding-top:100px;
 }
+
+#Immutable-comp{
+  width:100%;
+  max-width:400px;
+  margin: 0 auto;
+  .box{
+    background: black;
+    width:250px;
+    height:250px;
+    margin: 0 auto;
+  }
+  .button{
+    border-radius: 4px;
+    background:rgb(80, 80, 242);
+    padding:10px 20px;
+    margin:20px 0;
+    cursor: pointer;
+    color:white;
+    text-align: center;
+  
+  }
+}
