@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
 import Button from './Button.js';
 
+let user = {
+	name: 'Gary',
+	age: '38',
+	location: 'NJ'
+};
+
+let userNew = Object.assign({}, user, {
+	name: 'Greg'
+});
+if (user.name !== userNew.name) {
+	console.log('changed user');
+}
+
 export default class Counter extends Component {
 	constructor() {
 		super();
 		this.state = { status: 'manual', currentNumber: 0 };
 	}
 	clickedAdd = () => {
-		this.setState(
-			{
-				currentNumber: this.state.currentNumber + 1
-			},
-			() => {
-				console.log(this.state);
-			}
-		);
+		this.state.currentNumber = this.state.currentNumber + 1;
+		// this.setState(
+		// 	{
+		// 		currentNumber: this.state.currentNumber + 1
+		// 	},
+		// 	() => {
+		// 		console.log(this.state);
+		// 	}
+		// );
 	};
 	componentWillUnmount() {
 		console.log('component will mount stated');
