@@ -20,9 +20,11 @@ export default class Immutable extends Component {
 	}
 	clickedBtn = () => {
 		console.log(this.state);
-		const newGrade = Object.assign({}, this.state.user.grades, {
+		const newGrade = {
+			...this.state.user.grades,
 			math: 'A+'
-		});
+		};
+
 		const newUser = Object.assign({}, this.state.user, {
 			name: 'Mark',
 			grades: newGrade
