@@ -1,1 +1,1 @@
-Testing a counter using React
+Billing Application using React
