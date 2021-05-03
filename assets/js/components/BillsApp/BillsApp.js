@@ -4,16 +4,10 @@ import update from 'immutability-helper';
 export default class BillsApp extends Component {
 	constructor() {
 		super();
-		this.state = {
-		
-		};
+		this.state = {};
 	}
-	
-
 
 	render() {
-		return (
-		<div className="phone-container"></div>
-		);
+		return <div className="phone-container">App goes here</div>;
 	}
 }
