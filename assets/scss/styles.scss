@@ -57,4 +57,28 @@ h1{font-weight:100;}
       color:white;
     }
   }
+  #AllBills{
+    .container{
+      width: 100%;
+      padding:0 20px;
+    }
+    .total-bills{
+      color:white;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      width:100%;
+      padding:20px 0;
+      .text{
+        font-size:1.3rem;
+      }
+      .number{
+        font-size:.9rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-weight:300;
+      }
+    }
+  }
 }
