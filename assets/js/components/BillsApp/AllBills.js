@@ -8,14 +8,35 @@ export default class AllBills extends Component {
 
 	render() {
 		return (
-			<div id="AllBills">
+			<section id="AllBills">
 				<div className="container">
 					<div className="total-bills">
 						<div className="text">Total Amount:</div>
 						<div className="number">$874</div>
 					</div>
+					<ul className="bills-list">
+						<li className="bill">
+							<div className="company">
+								<div className="logo">
+									<img src="/img/billsapp/nintendo.jpg" />
+								</div>
+								<div className="title">nintendo</div>
+							</div>
+							<div className="price">-$19.99</div>
+						</li>
+
+						<li className="bill">
+							<div className="company">
+								<div className="logo">
+									<img src="/img/billsapp/nintendo.jpg" />
+								</div>
+								<div className="title">nintendo</div>
+							</div>
+							<div className="price">-$19.99</div>
+						</li>
+					</ul>
 				</div>
-			</div>
+			</section>
 		);
 	}
 }

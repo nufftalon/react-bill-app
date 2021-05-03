@@ -80,5 +80,48 @@ h1{font-weight:100;}
         font-weight:300;
       }
     }
+    .bills-list{
+      background:white;
+      border-radius:20px;
+
+      .bill{
+        display:flex;
+        justify-content: space-between;
+        border-bottom:1px solid #e8e8e8;
+        padding:20px 20px;
+        &:last-child{
+          border:none;
+        }
+        .company{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          .logo{
+            img{
+              border-radius:50%;
+              height:40px;
+                width:40px;
+            }
+          
+          }
+          .title{
+            font-size:1.1rem;
+            font-weight:500;
+            margin-left:20px;
+            color:rgb(63,60,60);
+            text-transform:capitalize;
+          }
+        }
+        .price{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          color:rgb(121,116,116);
+
+
+        }
+      }
+
+    }
   }
 }
