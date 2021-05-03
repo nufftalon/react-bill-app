@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import update from 'immutability-helper';
+import Header from './Header';
 
 export default class BillsApp extends Component {
 	constructor() {
@@ -8,6 +8,10 @@ export default class BillsApp extends Component {
 	}
 
 	render() {
-		return <div className="phone-container">App goes here</div>;
+		return (
+			<div id="BillsApp">
+				<Header />
+			</div>
+		);
 	}
 }
