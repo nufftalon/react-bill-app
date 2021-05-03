@@ -25,7 +25,7 @@ export default class Immutable extends Component {
 		console.log(this.state);
 
 		const newTeachers = update(this.state.teachers, {
-			$push: ['James']
+			$splice: [[2]]
 		});
 		const newState = update(this.state, {
 			teachers: { $set: newTeachers }
@@ -38,7 +38,7 @@ export default class Immutable extends Component {
 		console.log('Clicked BTN');
 	};
 	changeToActive = () => {
-		if (this.state.teachers[3] == 'James') {
+		if (this.state.teachers[2] !== 'Jennifer') {
 			return 'active';
 		} else {
 			return '';
