@@ -1,8 +1,16 @@
+
+
+
+
+
+
 #BillsApp{
     background: rbg(63, 255, 173);
-    background:linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+    background:linear-gradient(90deg, #36d1dc 0%, #5b86e5 100%);
     height:100vh;
+    width:100%;
     position:relative;
+    overflow:hidden;
     header{
       display: flex;
       justify-content: center;
@@ -15,6 +23,10 @@
       }
     }
     #AllBills{
+      position: relative;
+      z-index:3;
+      height: calc(100vh - 69px);
+      overflow:scroll;
       .container{
         width: 100%;
         padding:0 20px;
@@ -40,6 +52,9 @@
       .bills-list{
         background:white;
         border-radius:10px;
+        -webkit-box-shadow: 0px 10px 31px -9px rgba(173,173,173,1);
+        -moz-box-shadow: 0px 10px 31px -9px rgba(173,173,173,1);
+        box-shadow: 0px 10px 31px -9px rgba(173,173,173,1);
   
         .bill{
           display:flex;
@@ -81,6 +96,14 @@
   
       }
     }
+    .content-background{
+      background: #e8e8e8;
+      height:77vh;
+      width:100%;
+      position: absolute;
+      bottom:0;
+      z-index:2;
+    }
   }
 
   #FloatingMenu{
@@ -89,8 +112,12 @@
     display:flex;
     justify-content: space-between;
     position:absolute;
+    z-index:100;
     bottom: 0;
     width:100%;
+    -webkit-box-shadow: 0px -10px 31px -9px rgba(173,173,173,1);
+-moz-box-shadow: 0px -10px 31px -9px rgba(173,173,173,1);
+box-shadow: 0px -10px 31px -9px rgba(173,173,173,1);
     .icon{
       font-size:2rem;
       margin-bottom:10px;
@@ -111,12 +138,12 @@
       transition:all .4s ease-in-out;
       cursor: pointer;
       &:hover{
-        background: linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+        background: linear-gradient(90deg, #36d1dc 0%, #5b86e5 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align:center;
         .far:before, .fas:before{
-          background: linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+          background: linear-gradient(90deg, #36d1dc 0%, #5b86e5 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -140,7 +167,7 @@
 }
     
     .add-button{
-      background:linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+      background:linear-gradient(90deg, #36d1dc 0%, #5b86e5 100%);
       height:55px;
       width:55px;
       border-radius: 50%;
@@ -157,3 +184,32 @@
       }
     }
   }
+@media only screen and (min-width: 600px){
+  #app{
+    background:black;
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #BillsApp{
+    width:324px;
+    height:700px;
+    border-radius:15px;
+    li:last-child {
+      margin-bottom: 22em;
+      border:none;
+    }
+
+    .content-background{
+      background: #e8e8e8;
+      height: 500px;
+      width:100%;
+      position: absolute;
+      bottom:0;
+      z-index:2;
+    }
+
+  }
+}

@@ -11,35 +11,35 @@ export default class FloatingMenu extends Component {
 			<nav id="FloatingMenu">
 				<div className="link">
 					<div className="icon">
-						<i class="far fa-credit-card"></i>
+						<i className="far fa-credit-card"></i>
 					</div>
 					<div className="text">spend</div>
 				</div>
 
 				<div className="link">
 					<div className="icon">
-						<i class="fas fa-piggy-bank"></i>
+						<i className="fas fa-piggy-bank"></i>
 					</div>
 					<div className="text">save</div>
 				</div>
 
 				<div className="link">
 					<div className="icon">
-						<i class="fas fa-exchange-alt"></i>
+						<i className="fas fa-exchange-alt"></i>
 					</div>
 					<div className="text">transfer</div>
 				</div>
 
 				<div className="link">
 					<div className="icon">
-						<i class="fas fa-cogs"></i>
+						<i className="fas fa-cogs"></i>
 					</div>
 					<div className="text">settings</div>
 				</div>
 				<div className="link">
 					<div className="add-button">
 						<div className="icon">
-							<i class="fas fa-plus"></i>
+							<i className="fas fa-plus"></i>
 						</div>
 					</div>
 				</div>
