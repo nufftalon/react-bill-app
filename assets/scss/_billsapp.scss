@@ -1,0 +1,119 @@
+#BillsApp{
+    background: rbg(63, 255, 173);
+    background:linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+    height:100vh;
+    header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:20px 0;
+      h2{
+        font-size:1.8rem;
+        font-weight:900;
+        color:white;
+      }
+    }
+    #AllBills{
+      .container{
+        width: 100%;
+        padding:0 20px;
+      }
+      .total-bills{
+        color:white;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding:20px 0;
+        .text{
+          font-size:1.3rem;
+        }
+        .number{
+          font-size:.9rem;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          font-weight:300;
+        }
+      }
+      .bills-list{
+        background:white;
+        border-radius:20px;
+  
+        .bill{
+          display:flex;
+          justify-content: space-between;
+          border-bottom:1px solid #e8e8e8;
+          padding:20px 20px;
+          &:last-child{
+            border:none;
+          }
+          .company{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            .logo{
+              img{
+                border-radius:50%;
+                height:40px;
+                  width:40px;
+              }
+            
+            }
+            .title{
+              font-size:1.1rem;
+              font-weight:500;
+              margin-left:20px;
+              color:rgb(63,60,60);
+              text-transform:capitalize;
+            }
+          }
+          .price{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:rgb(121,116,116);
+  
+  
+          }
+        }
+  
+      }
+    }
+  }
+
+  #FloatingMenu{
+    background:white;
+    padding:20px;
+    .icon{
+      font-size:2rem;
+      margin-bottom:10px;
+      color:rgb(201, 201, 201);
+      transition:all .4s ease-in-out;
+    }
+    .text{
+      font-size:.8rem;
+      color:rgb(201, 201, 201);
+      transition:all .4s ease-in-out;
+
+    }
+    .link{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition:all .4s ease-in-out;
+      cursor: pointer;
+      &:hover{
+        background: linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align:center;
+        .far:before{
+          background: linear-gradient(90deg, rgba(63, 255, 173, 1) 0%, rgba(66,195,194,1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
