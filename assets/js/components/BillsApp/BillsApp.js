@@ -7,17 +7,25 @@ import AddBill from './AddBill';
 export default class BillsApp extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			addBillOpen: false,
+			allBills: []
+		};
 	}
+	clickedAddBillBtn = () => {
+		this.setState({
+			addBillOpen: !this.state.addBillOpen
+		});
+	};
 
 	render() {
 		return (
 			<div id="BillsApp">
 				<Header />
 				<AllBills />
-				<AddBill />
+				<AddBill addBillOpen={this.state.addBillOpen} />
 				<div className="content-background"></div>
-				<FloatingMenu />
+				<FloatingMenu clickedAddBillBtn={this.clickedAddBillBtn} />
 			</div>
 		);
 	}

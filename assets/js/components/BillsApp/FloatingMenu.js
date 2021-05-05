@@ -37,7 +37,7 @@ export default class FloatingMenu extends Component {
 					<div className="text">settings</div>
 				</div>
 				<div className="link">
-					<div className="add-button">
+					<div className="add-button" onClick={this.props.clickedAddBillBtn}>
 						<div className="icon">
 							<i className="fas fa-plus"></i>
 						</div>
