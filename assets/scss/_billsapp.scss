@@ -184,6 +184,61 @@ box-shadow: 0px -10px 31px -9px rgba(173,173,173,1);
       }
     }
   }
+
+  #AddBill{
+    position: absolute;
+    z-index:5;
+    top:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(90deg, #36d1dc 0%, #5b86e5 100%);
+    transform: translate3d(100%,0 ,0);
+    transition:transform .4s ease-in-out;
+    &.active{
+    transform: translate3d(0,0,0);
+    }
+    .container{
+      padding: 0 20px;
+    }
+    h2{
+      font-size:2rem;
+      color:white;
+      text-transform:uppercase;
+      text-align:center;
+      margin: 2rem 0;
+    }
+    .form-group{
+      margin: 0 0 1.5rem;
+    }
+    label{
+      display:block;
+      color:white;
+      font-size:.8rem;
+      margin-bottom:10px;
+      font-weight:700;
+  }
+    input{
+      display:block;
+      background:transparent;
+      border:1px solid white;
+      font-size:1.1rem;
+      padding:7px;
+      color:white;
+      width:100%;
+      &:focus{
+        outline:0;
+      }
+    }
+    button{
+      background: white;
+      border:none;
+      padding:10px;
+      width:100%;
+      text-transform: uppercase;
+      font-size:1rem;
+    }
+  }
 @media only screen and (min-width: 600px){
   #app{
     background:black;
