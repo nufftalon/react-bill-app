@@ -5,7 +5,8 @@ export default class AddBill extends Component {
 		super();
 		this.state = {
 			business_name: '',
-			price: 0
+			price: '',
+			status: 'unpaid'
 		};
 	}
 	inputChange = () => {
@@ -19,6 +20,7 @@ export default class AddBill extends Component {
 			[name]: value
 		});
 	};
+
 	handleSubmit = () => {
 		event.preventDefault();
 		this.setState({
