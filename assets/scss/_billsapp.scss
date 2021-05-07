@@ -52,6 +52,8 @@
       .bills-list{
         background:white;
         border-radius:10px;
+        overflow:hidden;
+        height:82px;
         -webkit-box-shadow: 0px 10px 31px -9px rgba(173,173,173,1);
         -moz-box-shadow: 0px 10px 31px -9px rgba(173,173,173,1);
         box-shadow: 0px 10px 31px -9px rgba(173,173,173,1);
@@ -61,6 +63,15 @@
           justify-content: space-between;
           border-bottom:1px solid #e8e8e8;
           padding:20px 20px;
+          position:relative;
+          overflow:hidden;
+          height:82px;
+          &:hover{
+            .buttons{            
+              transform:translate3d(0, 0, 0);
+            }
+
+          }
           &:last-child{
             border:none;
           }
@@ -91,6 +102,35 @@
             color:rgb(121,116,116);
   
   
+          }
+          .buttons{
+            display:flex;
+            position:absolute;
+            top:0;
+            right:0;
+            height:100%;
+            width:100px;
+            transform:translate3d(100%,0,0);
+            transition:transform .4s ease-in-out;
+            cursor: pointer;
+            .paid{
+              background:#008617;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width:50%;
+              color:white;
+            }
+            .delete{
+              background:#860000;
+              border-top-right-radius: 10px;
+              border-bottom-right-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width:50%;
+              color:white;
+            }
           }
         }
   

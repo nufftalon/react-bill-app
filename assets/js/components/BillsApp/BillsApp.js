@@ -10,7 +10,13 @@ export default class BillsApp extends Component {
 		super();
 		this.state = {
 			addBillOpen: false,
-			allBills: []
+			allBills: [
+				{
+					business_name: 'geico',
+					price: 50,
+					status: 'unpaid'
+				}
+			]
 		};
 	}
 	clickedAddBillBtn = () => {
@@ -31,6 +37,10 @@ export default class BillsApp extends Component {
 				console.log(this.state);
 			}
 		);
+	};
+
+	changeBillStatus = billIndex => {
+		console.log(billIndex);
 	};
 
 	render() {
